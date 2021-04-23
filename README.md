@@ -6,6 +6,9 @@ React Native ⚛  Restaurant 🍔🌭🍟🍕  App
 ## Instalar react-navigation/native
 `npm install @react-navigation/native`
 
+# instalaciones de native base
+### `npm install native-base`
+
 ## Instalar las dependencias
 `npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 
