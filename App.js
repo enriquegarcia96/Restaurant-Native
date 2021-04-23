@@ -1,14 +1,11 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import 'react-native-gesture-handler';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import React from 'react';
-import type {Node} from 'react';
 import {
+  Animated,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -18,95 +15,99 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import NuevaOrden from './views/NuevaOrden';
+import Menu from './views/Menu';
+import DetallePlatillo from './views/DetallePlatillo';
+import FormularioPlatillo from './views/FormularioPlatillo';
+import ResumenPedido from './views/ResumenPedido';
+import ProgresoPedido from './views/ProgresoPedido';
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+//--- importar state de context ---//
+import FirebaseState from './context/firebase/firebaseState'
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+
+const Stack = createStackNavigator();
+
+const App =  () => {
+
+  return(
+    <>
+      <FirebaseState>
+        <NavigationContainer>
+          <Stack.Navigator
+
+            screenOptions={{
+              headerStyle: {
+                backgroundColor: '#FFDA00',
+              },
+              headerTitleStyle: {
+                fontWeight: 'bold'
+              },
+              headerTitleAlign: 'center'
+            }}
+          >
+
+              <Stack.Screen 
+                  name='NuevaOrden'
+                  component={NuevaOrden}
+                  options={{
+                    title: 'Nueva Orden'
+                  }}
+              />
+
+              <Stack.Screen 
+                name='Menu'
+                component={Menu}
+                options={{
+                  title: 'Nuestro Menu'
+                }}
+              />
+
+              <Stack.Screen 
+                name='DetallePlatillo'
+                component={DetallePlatillo}
+                options={{
+                  title: 'Detalle Platillo'
+                }}
+              />
+
+              <Stack.Screen 
+                name='FormularioPlatillo'//para redireccionar
+                component={FormularioPlatillo}
+                options={{
+                  title: 'Ordenar Platillo'
+                }}    
+              />
+
+              <Stack.Screen 
+                name='ResumenPedido'
+                component={ResumenPedido}
+                options={{
+                  title: 'Resumen Pedido'
+                }}
+              />
+
+              <Stack.Screen 
+                name='ProgresoPedido'
+                component={ProgresoPedido}
+                options={{
+                  title: 'Progreso de Pedido'
+                }}
+              />
+
+          </Stack.Navigator>
+        </NavigationContainer>
+
+      </FirebaseState>
+    </>
+  )
+
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
+ 
 });
 
 export default App;
