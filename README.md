@@ -16,6 +16,10 @@ React Native ⚛  Restaurant 🍔🌭🍟🍕  App
 
 `npm i @react-navigation/stack`
 
+# Para agrupar productos
+### `npm install lodash`
+
+
 ## Si desarrollas una app para iOS 
 
 cd ios/
