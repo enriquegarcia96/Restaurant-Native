@@ -11,6 +11,8 @@ React Native ⚛  Restaurant 🍔🌭🍟🍕  App
 
 # instalaciones de Iconos
 ### `npm install react-native-vector-icons`
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
 
 
 ## Instalar las dependencias
