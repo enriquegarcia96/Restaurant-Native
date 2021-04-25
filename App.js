@@ -27,6 +27,9 @@ import FirebaseState from './context/firebase/firebaseState';
 import PedidosState from './context/pedidos/pedidosState';
 
 
+// componentes //
+import BotonResumen from './components/ui/BotonResumen';
+
 
 const Stack = createStackNavigator();
 
@@ -65,7 +68,8 @@ const App =  () => {
                   name='Menu'
                   component={Menu}
                   options={{
-                    title: 'Nuestro Menu'
+                    title: 'Nuestro Menu',
+                    headerRight: props => <BotonResumen />
                   }}
                 />
 
