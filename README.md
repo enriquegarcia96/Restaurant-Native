@@ -9,6 +9,10 @@ React Native ⚛  Restaurant 🍔🌭🍟🍕  App
 # instalaciones de native base
 ### `npm install native-base`
 
+# instalaciones de Iconos
+### `npm install react-native-vector-icons`
+
+
 ## Instalar las dependencias
 `npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 
