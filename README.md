@@ -13,7 +13,8 @@ React Native ⚛  Restaurant 🍔🌭🍟🍕  App
 ### `npm install react-native-vector-icons`
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
-
+# Para el contador
+### `npm i react-countdown`
 
 
 ## Instalar las dependencias
