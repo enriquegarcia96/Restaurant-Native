@@ -126,9 +126,9 @@ const ResumenPedido = () => {
                                 </Left>
 
                                 <Body>
-                                    <Text>{nombre}</Text>
-                                    <Text>Cantidad: {cantidad}</Text>
-                                    <Text>Precio: L. {precio}</Text>
+                                    <Text style={{ color: '#fff', fontFamily: 'OldStandardTT-Bold' }} >{nombre}</Text>
+                                    <Text style={{ color: '#fff', fontFamily: 'OldStandardTT-Bold' }} >Cantidad: {cantidad}</Text>
+                                    <Text style={{ color: '#fff', fontFamily: 'OldStandardTT-Bold' }} >Precio: L. {precio}</Text>
 
                                     <Button 
                                         onPress={ () =>  confirmarEliminacion(id) }
@@ -147,7 +147,7 @@ const ResumenPedido = () => {
                 } )}
 
 
-                <Text style={ globalStyles.cantidad } >Total a Pagar: L {total} </Text>
+                <Text style={ globalStyles.cantidad} >Total a Pagar: L {total} </Text>
 
                 <Button
                     onPress={ () => navigation.navigate('Menu') }
