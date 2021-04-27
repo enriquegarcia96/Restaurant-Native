@@ -42,17 +42,16 @@ const App =  () => {
         <PedidosState>
           <NavigationContainer>
             <Stack.Navigator
-
               screenOptions={{
                 headerStyle: {
-                  backgroundColor: '#FFDA00',
+                  backgroundColor: '#393e46'
                 },
                 headerTitleStyle: {
-                  fontWeight: 'bold'
+                  fontFamily: 'CodaCaption-ExtraBold',
+                  color: '#FFF'
                 },
                 headerTitleAlign: 'center',
-                headerTintColor: '#000'
-                
+                headerTintColor:'#000',
               }}
             >
 
@@ -60,8 +59,10 @@ const App =  () => {
                     name='NuevaOrden'
                     component={NuevaOrden}
                     options={{
-                      title: 'Nueva Orden'
+                      title: 'Nueva Orden',
+                      
                     }}
+
                 />
 
                 <Stack.Screen 
@@ -69,6 +70,7 @@ const App =  () => {
                   component={Menu}
                   options={{
                     title: 'Nuestro Menu',
+                    headerTitleAlign: 'left',
                     headerRight: props => <BotonResumen />
                   }}
                 />
@@ -85,7 +87,8 @@ const App =  () => {
                   name='FormularioPlatillo'//para redireccionar
                   component={FormularioPlatillo}
                   options={{
-                    title: 'Ordenar Platillo'
+                    title: 'Ordenar Platillo',
+                    
                   }}    
                 />
 
@@ -101,7 +104,7 @@ const App =  () => {
                   name='ProgresoPedido'
                   component={ProgresoPedido}
                   options={{
-                    title: 'Progreso de Pedido'
+                    title: 'Progreso'
                   }}
                 />
 
