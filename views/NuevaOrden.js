@@ -12,7 +12,8 @@ const NuevaOrden = () => {
 
     return (
 
-        <Container style={globalStyles.contenedor} >
+        <Container style={globalStyles.contenedor}>
+            <Text style={styles.firma} >Enrique S. García</Text>
             <View style={[globalStyles.contenido, styles.contenido]}>
                 <Button
                     style={globalStyles.boton}
@@ -34,6 +35,14 @@ const styles = StyleSheet.create({
     contenido:{
         flexDirection: 'column',
         justifyContent: 'center'
+    },
+    firma: {
+        color: '#FFF',
+        fontFamily: 'Parisienne-Regular',
+        textAlign: 'center',
+        fontSize: 30,
+        position:'absolute',
+        margin: 70
     }
 
 })

@@ -93,16 +93,17 @@ const Menu = () => {
                                     
                                     <Body>
 
-                                        <Text>{nombre}</Text>
+                                        <Text style={{ fontFamily: 'CodaCaption-ExtraBold' }} >{nombre}</Text>
 
                                         <Text
                                             note
                                             numberOfLines={2}
+                                            style={{ fontFamily: 'Vidaloka-Regular' }}
                                         >
                                             {descripcion}
                                         </Text>
 
-                                        <Text>Precio: L.{precio}</Text>
+                                        <Text style={{ fontFamily: 'OldStandardTT-Italic' }} >Precio: L.{precio}</Text>
 
                                     </Body>
                                 </ListItem>
@@ -120,13 +121,14 @@ const Menu = () => {
 const styles = StyleSheet.create({
 
     separador: {
-        backgroundColor: '#000',
+        backgroundColor: '#222831',
 
     },
     separadorTexto: {
-        color: '#FFDA00',
-        fontWeight: 'bold',
-        textTransform: 'uppercase'
+        color: '#d72323',
+        fontFamily: 'FreckleFace-Regular',
+        textTransform: 'uppercase',
+        fontSize: 19
     }
 
 })

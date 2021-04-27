@@ -36,6 +36,9 @@ export default ( state, action ) => {
         case PEDIDO_ORDENADO:
             return{
                 ...state,
+                //--- una vez que el pedido se complete vuelve a su estado original(desde cero) ---//
+                pedido:[],// oculta el boton de pedido ( si tiene alguna )
+                total: 0,
                 idpedido: action.payload
             }
 

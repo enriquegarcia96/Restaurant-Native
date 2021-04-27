@@ -40,7 +40,7 @@ const DetallePlatillo = () => {
                     <CardItem>
                         <Body>
                             <Image style={ globalStyles.imagen } source={{ uri: imagen }} />
-                            <Text style={{ marginTop:20 }} >{descripcion}</Text>
+                            <Text style={{ marginTop:20, fontFamily: 'Vidaloka-Regular' }} >{descripcion}</Text>
                             <Text style={ globalStyles.cantidad } >Precio: L. {precio}</Text>
                         </Body>
                     </CardItem>

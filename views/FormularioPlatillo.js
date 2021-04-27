@@ -139,7 +139,7 @@ const FormularioPlatillo = () => {
                         </Col>
                     </Grid>
 
-                    <Text style={globalStyles.cantidad} >Subtotal: L. {total} </Text>
+                    <Text style={globalStyles.cantidad2} >Subtotal: L. {total} </Text>
                 </Form>
             </Content>
 
